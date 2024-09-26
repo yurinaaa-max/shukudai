@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyProfile</title>
+    <meta name="description" content="Kazuki Asahinaの自己紹介と趣味のカメラで撮影した写真を掲載しているサイトです。">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- slickの読み込み -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <a href="index.html" class="home">My Profile</a>
+            </div>
+            <ul class="menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#works">Works</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <!-- mv -->
+            <!-- <div id="mv">
+                <img src="image/main.jpg" class="mainpic" alt="CanonのCamera">
+            </div> -->
+
+            <!-- カルーセル -->
+            <section id="carousel-section">
+                <div class="carousel">
+                <div>
+                    <img class="carouselImg" src="image/main.jpg" alt="CanonのCamera">
+                </div>
+                <div>
+                    <img class="carouselImg" src="image/main2.png" alt="Camera機材">
+                </div>
+                <div>
+                    <img class="carouselImg" src="image/main3.png" alt="夕焼けのカメラ撮影">
+                </div>
+                </div>
+            </section>
+    
+            <!-- about -->
+            <h1 id="about">About</h1>
+            <section class="about section">
+                <img src="image/about.png" class="circle" alt="Kazuki Asahina">
+                <div class="content">
+                    <p class="name">Kazuki Asahina</p>
+                    <ul>
+                        <li>25歳 長野県佐久市出身</li>
+                        <li>ソフトウェア業界でマーケティングに従事</li>
+                        <li>趣味はカメラ、愛機はCanon</li>
+                        <li>自然を撮影するのが好きで、海や山によく行く</li>
+                    </ul>
+                </div>
+            </section>
+    
+            <!-- works -->
+            <h1 class="title">Works</h1>
+            <section class="section" id="works">
+                <div class="item">
+                    <div class="box3">
+                        <img src="image/works1.jpg" class="worksImg" alt="日本海">
+                        <p>新潟に訪れた際に、日本海の雄大さに魅了されて撮影した1枚</p>
+                    </div>
+                    <div class="box3">
+                        <img src="image/works2.jpg" class="worksImg" alt="冠雪した御嶽山">
+                        <p>地元長野の木曽町から撮影した、冠雪した御嶽山</p>
+                    </div>
+                    <div class="box3">
+                        <img src="image/works3.jpg" class="worksImg" alt="日本の町並み">
+                        <p>京都で撮影した、明け方の古き良き日本の町並み</p>
+                    </div>
+                </div>
+
+                <!-- モーダル  -->
+                <div class="modal">
+                    <a href="" class="close-modal">&times;</a>
+                    <div class="modal-content">
+                        <img src="" alt="Modal Image" id="modal-image">
+                    </div>
+                </div>
+
+            </section>
+        </article>    
+    </main>
+
+    <footer>
+        <small>&copy;  MyProfile. All rights reserved.</small>
+    </footer>
+
+    <!-- top-button -->
+    <div class="pagetop">TOP</div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <!-- slickの読み込み jQuery依存なので、jqueryより下に記述！ -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>

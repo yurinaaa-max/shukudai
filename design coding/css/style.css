@@ -1,0 +1,279 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #000;
+    background-color: #fff;
+    font-family: "Noto Sans JP";
+
+    /* bodyの余白をなくす */
+    margin: 0px;
+    padding: 0px;
+}
+
+p, small {
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 34px;
+    display: inline-block;
+    line-height: 46px;
+}
+
+h1 {
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+li {
+    list-style: none;
+}
+
+
+/* -------- header --------- */
+header {
+    width: 100%;
+}
+
+header .home {
+    border: 1px #000 solid;
+    padding: 12px 29px;
+}
+
+.home:hover {
+    opacity: .5;
+    transition: .2s;
+}
+
+/* カルーセル */
+.carousel {
+    width: 100%;
+    /* margin-left: 20px; */
+}
+
+.carouselImg {
+    width: 100%;
+}
+
+
+/* メニューの余白 */
+header .menu > a {
+    margin-left: 20px;
+}
+
+.menu li:hover {
+    opacity: .5;
+}
+
+/* ナビゲーションメニュー */
+nav {
+    font-size: 34px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    /*list-style: none;*/
+    padding: 20px;
+    max-width: 960px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+header ul {
+    display: flex;
+}
+
+header li {
+    margin-left: 20px;
+    padding: 12px 0px;
+}
+
+
+/* ---------- mv ----------- */
+#mv {
+    width: 100%;
+    margin: 0 auto 50px auto;
+}
+
+#mv img {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+/* ---------- about ----------- */
+#about {
+    padding-top: 40px;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 auto 50px auto;
+    max-width: 960px;
+}
+
+
+.about .name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.about img {
+    border-radius: 100%;
+    width: 141px;
+    height: 142px;
+    object-fit: cover;
+}
+
+/* プロフィールの説明部分 */
+.content {
+    margin-left: 33px;
+}
+
+.content li {
+    font-size: 18px;
+}
+
+.content li::before {
+    content: '・';
+}
+
+
+
+/* ------------ works ------------ */
+#works {
+    margin-bottom: 50px;
+    margin: 0 auto;
+    max-width: 573px;
+}
+
+.box3 {
+    width: calc(100%/3);
+    /*
+    width: calc(179/573*100%);
+    */
+}
+
+.box3 img {
+    width: 100%;
+}
+
+.box3 p {
+    text-align: center;
+}
+
+.item {
+    display: flex;
+    gap: 18px;
+}
+
+.box3:hover {
+    opacity: .7;
+    transition: .3s;
+    cursor: pointer;
+}
+
+/* モーダル */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;/*ここ*/
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 5;
+}
+
+.modal-content {
+    position: absolute;
+    width: 80%;
+    max-width: 800px;
+    /*ここから*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /*ここまで*/
+}
+
+#modal-image {
+    width: 100%;
+    height: auto;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #fff;
+    font-size: 40px;
+    text-decoration: none;
+}
+
+
+
+/* --------- footer ----------- */
+footer {
+    text-align: center;
+    margin: 32px 0 17px 0;
+}
+
+
+/* ----------- topへ戻るボタン ------------ */
+.pagetop {
+    cursor: pointer;
+    position: fixed;
+    right: 20px;
+    bottom: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: .3s;
+    color: #fff;
+    background: #000;
+    font-size: 12px;
+}
+
+.pagetop:hover {
+    background: #5b5b5b;
+}
+
+
+/* sectionフェードイン */
+.section {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.section.visible {
+    opacity: 1;
+}
+
+
+@media screen and (max-width: 767px) {
+    .about{
+        width: 84%;
+    }
+    .box3 {
+        width: 100%;
+    }
+    .item {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    #works{
+        width: 84%;
+    }
+}
