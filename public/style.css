@@ -1,0 +1,153 @@
+html {
+    font-family: "Noto Serif JP", serif;
+    color: #fff;
+    font-size: 1rem;
+    scroll-behavior: smooth;
+
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    /* background: #020001; */
+    background: #f72e92;
+    padding: 0;
+    margin: 0;
+
+}
+figure{
+    margin: 0;
+    padding: 0;
+}
+
+/* ----------- 共通 ----------- */
+.container {
+    padding: 0 60px;
+}
+
+/* 縦書き文字 */
+.rl {
+    writing-mode: vertical-rl;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+
+/* ----------- header ----------- */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 60px;
+    z-index: 5;
+    max-width: 1440px;
+}
+
+.nav-ul a {
+    letter-spacing: 10px;
+    font-weight: bold;
+}
+
+.nav-ul {
+    display: flex;
+}
+
+.nav-ul li {
+    margin-left: 30px;
+}
+
+.nav-ul li:last-child {
+    border: 1px solid #fff;
+    padding: 15px 5px 10px 5px;
+}
+
+/* ----------- mv ----------- */
+.mv {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+figure img {
+    width: 100%;
+    height: 100%;
+}
+
+.mv-p {
+    font-weight: 500;
+    font-size: 2.7rem;
+    letter-spacing: 5px;
+    margin-left: 60px;
+    line-height: 5rem;
+}
+
+.mv-p em {
+    font-style: normal;
+}
+
+.mv-p span {
+    position: relative;
+}
+
+.mv-p span::before {
+    content: "・";
+    position: absolute;
+    top: -2.5rem;
+    left: 0;
+    color: #caba82;
+}
+
+
+/* ----------- お知らせ ----------- */
+#notice {
+    display: flex;
+    border: #7c7c7c solid 1px;
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px 40px;
+    background: rgba(13, 5, 5, .9);
+    align-items: center;
+    margin-top: 100px;
+}
+
+#notice h2 {
+    color: #caba82;
+    padding-right: 40px;
+}
+.notice-content{
+    border-left: #7c7c7c solid 1px;
+}
+.notice-content dl{
+    display: flex;
+    margin: 0;
+   margin-left: 40px;
+}
+.notice-content dl:not(:last-child){
+    margin-bottom: 20px;
+}
+.notice-content dd{
+ 
+}
+/*
+#notice dl {
+    padding-left: 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#notice dt {
+    width: 30%;
+    background: red;
+}
+
+#notice dd {
+    width: 70%;
+    background: blue;
+}
+*/
