@@ -23,6 +23,9 @@
     <link rel="icon" href="favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 
+    <!-- リセットCSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.css">
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
     <!-- google fonts -->
@@ -50,12 +53,13 @@
     <main>
         <p class="mv-p">たまごと、<br><em><span>き</span><span>み</span></em>に溺れる<br>時がきた。</p>
         <figure class="mv">
-            <img src="images/photo-tkg.jpg" srcset="images/photo-tkg@2x.jpg 2x" width="720" height="553" decoding="async" alt="あったかいご飯に厳選したたまごをかけてネギを添えた美味しそうなたまごかけごはん">
+            <!-- width="720" height="553" -->
+            <img src="images/photo-tkg.jpg" srcset="images/photo-tkg@2x.jpg 2x" decoding="async" alt="あったかいご飯に厳選したたまごをかけてネギを添えた美味しそうなたまごかけごはん">
         </figure>    
     
         <section id="notice">
             <h2>お知らせ</h2>
-            <div class="notice-content">
+            <div>
                 <dl>
                     <dt><time datetime="2022-04-02">2022.04.02</time></dt>
                     <dd><time datetime="2022-04-02">本日</time>の卵かけご飯は終了いたしました。</dd>
@@ -71,153 +75,147 @@
             </div>
         </section><!-- /お知らせ -->
         <section id="commitment" class="container">
-            <h2>こだわり</h2>
+            <h2 class="rl title">こだわり</h2>
             <p>
                 だみい屋は、架空のたまごかけご飯専門店です。たまごかけご飯に合うたまご、お米、醤油を探し続け、ついに自信を持ってご提供できるたまごかけご飯が完成しました。当店にはたまごかけご飯しかありませんが、厳選した素材のみを使った架空のたまごかけご飯がここにあります。
             </p>
         </section><!-- /こだわり -->
         <section id="menu" class="container">
-            <h2>お品書き</h2>
-            <p>
-                3種類のたまごをご用意しています。厳選したたまごを使った架空のTKGをご賞味ください。
-            </p>
+            <div>
+                <h2 class="rl title">お品書き</h2>
+                <p>
+                    3種類のたまごをご用意しています。厳選したたまごを使った架空のTKGをご賞味ください。
+                </p>
+            </div>
             <article>
-                <h3>だみたま</h3>
                 <figure>
                     <img src="images/photo-damitama.jpg" srcset="images/photo-damitama@2x.jpg 2x" width="284" height="219" alt="熱々ごはんの上にだみたまをかけて、ネギと鰹節をトッピング。" decoding="async">
                 </figure>
-                <p>黄身がとっても濃厚な一番人気の架空のたまご</p>
-                <p>¥ 800<small>（税込み）</small></p>
+                <h3>だみたま</h3>
+                <p class="menu-p">黄身がとっても濃厚な一番人気の架空のたまご</p>
+                <p class="price"><small>¥</small> 800<small>（税込み）</small></p>
             </article><!-- /だみたま -->
             <article>
-                <h3>かくうの卵</h3>
                 <figure>
                     <img src="images/photo-kakuu.jpg" srcset="images/photo-kakuu@2x.jpg 2x" width="284" height="219" alt="熱々ごはんの上にかくうの卵をかけて、ネギと鰹節をトッピング。" decoding="async">
                 </figure>
-                <p>甘みとコクがクセになる架空のたまご</p>
-                <p>¥ 800<small>（税込み）</small></p>
+                <h3>かくうの卵</h3>
+                <p class="menu-p">甘みとコクがクセになる架空のたまご</p>
+                <p class="price"><small>¥</small> 800<small>（税込み）</small></p>
             </article><!-- /かくうの卵 -->
             <article>
-                <h3>くうそう卵</h3>
                 <figure>
                     <img src="images/photo-kuusou.jpg" srcset="images/photo-kuusou@2x.jpg 2x" width="284" height="219" alt="熱々ごはんの上にくうそう卵をかけて、ネギと鰹節をトッピング。" decoding="async">
                 </figure>
-                <p>濃厚な味わいで栄養価も高い空想のたまご</p>
-                <p>¥ 800<small>（税込み）</small></p>
+                <h3>くうそう卵</h3>
+                <p class="menu-p">濃厚な味わいで栄養価も高い空想のたまご</p>
+                <p class="price"><small>¥</small> 800<small>（税込み）</small></p>
             </article><!-- /くうそう卵 -->
         </section><!-- /お品書き -->
         <section id="access" class="container">
-            <h2>アクセス</h2>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.747975777088!2d139.74285797449372!3d35.65858047259461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bbd9009ec09%3A0x481a93f0d2a409dd!2z5p2x5Lqs44K_44Ov44O8!5e0!3m2!1sja!2sjp!4v1727845756160!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-            <dl>
-                <dt>所在地</dt>
-                <dd>
-                    〒100-XXXX<br>
-                    東京都架空区架空町1-2-1
-                </dd>
-                <dt>道順</dt>
-                <dd>
-                    <ol>
-                        <li>地下鉄架空線架空駅を下車</li>
-                        <li>南改札口を出て、架空通りを東に500mほど直進</li>
-                        <li>右手に当店の看板が見えたら到着</li>
-                    </ol>
-                </dd>
-            </dl>
-            <p><strong>当店に駐車場はありません。</strong></p>
-        
-            <table>
-                <caption>今週の予約状況</caption>
-                <thead>
-                    <tr>
-                        <th><br></th>
-                        <th scope="col"><time datetime="2022-04-03">4/3（日）</time></th>
-                        <th scope="col"><time datetime="2022-04-04">4/4（月）</time></th>
-                        <th scope="col"><time datetime="2022-04-05">4/5（火）</time></th>
-                        <th scope="col"><time datetime="2022-04-06">4/6（水）</time></th>
-                        <th scope="col"><time datetime="2022-04-07">4/7（木）</time></th>
-                        <th scope="col"><time datetime="2022-04-08">4/8（金）</time></th>
-                        <th scope="col"><time datetime="2022-04-09">4/9（土）</time></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row"><time>11:00</time></th>
-                        <td>空なし</td>
-                        <td>空なし</td>
-                        <td>空なし</td>
-                        <td>空あり</td>
-                        <td>空なし</td>
-                        <td>定休日</td>
-                        <td>空なし</td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><time>12:00</time></th>
-                        <td>空なし</td>
-                        <td>空なし</td>
-                        <td>空なし</td>
-                        <td>空あり</td>
-                        <td>空あり</td>
-                        <td>定休日</td>
-                        <td>空なし</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div>
+                <h2 class="title">アクセス</h2>
+                <dl>
+                    <dt>所在地</dt>
+                    <dd>
+                        〒100-XXXX<br>
+                        東京都架空区架空町1-2-1
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>道順</dt>
+                    <dd>
+                        <ol>
+                            <li>地下鉄架空線架空駅を下車</li>
+                            <li>南改札口を出て、架空通りを東に500mほど直進</li>
+                            <li>右手に当店の看板が見えたら到着</li>
+                        </ol>
+                    </dd>
+                </dl>
+                <p><strong>当店に駐車場はありません。</strong></p>
+            
+                <table>
+                    <caption>今週の予約状況</caption>
+                    <thead>
+                        <tr>
+                            <th><br></th>
+                            <th scope="col"><time datetime="2022-04-03">4/3（日）</time></th>
+                            <th scope="col"><time datetime="2022-04-04">4/4（月）</time></th>
+                            <th scope="col"><time datetime="2022-04-05">4/5（火）</time></th>
+                            <th scope="col"><time datetime="2022-04-06">4/6（水）</time></th>
+                            <th scope="col"><time datetime="2022-04-07">4/7（木）</time></th>
+                            <th scope="col"><time datetime="2022-04-08">4/8（金）</time></th>
+                            <th scope="col"><time datetime="2022-04-09">4/9（土）</time></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><time>11:00</time></th>
+                            <td class="none">空なし</td>
+                            <td class="none">空なし</td>
+                            <td class="none">空なし</td>
+                            <td>空あり</td>
+                            <td class="none">空なし</td>
+                            <td class="none">定休日</td>
+                            <td class="none">空なし</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><time>12:00</time></th>
+                            <td class="none">空なし</td>
+                            <td class="none">空なし</td>
+                            <td class="none">空なし</td>
+                            <td>空あり</td>
+                            <td>空あり</td>
+                            <td class="none">定休日</td>
+                            <td class="none">空なし</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section><!-- /アクセス -->
         <section id="reserve" class="container">
-            <h2>ご予約</h2>
+            <h2 class="title">ご予約</h2>
             <p><strong>当店は完全予約制です。</strong>下記の予約フォームよりご予約の上ご来店下さい。</p>
-
-            <form action="receive.php" method="post">
-                <p>
-                    <label>
-                        お名前<span>（必須項目）</span>
-                        <input type="text" name="name" placeholder="架空 太郎" required>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        フリガナ<span>（必須項目）</span>
-                        <input type="text" name="furigana" placeholder="カクウ タロウ" required>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        メールアドレス<span>（必須項目）</span>
-                        <input type="email" name="email" placeholder="kakuu@example.com" required>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        電話番号<span>（必須項目）</span>
-                        <input type="tel" name="tel" placeholder="000-0000-0000" required>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        ご予約日<span>（必須項目）</span>
-                        <input type="date" name="date" required>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        ご予約時間<span>（必須項目）</span>
-                        <input type="time" name="time" required>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        ご予約人数<span>（必須項目）</span>
-                        <input type="number" name="people" required> 人
-                    </label>
-                </p>
-                <p>
-                    備考<span>（ご要望やお持ちのアレルギーなど）</span>
-                    <textarea name="note" cols="30" rows="10" placeholder="ネギアレルギーがある"></textarea>
-                </p>
-                <input type="submit" value="予約する">
-            </form>
+            <div class="form-wrap">
+                <form action="receive.php" method="post">
+                    <dl>
+                        <dt><label for="name">お名前<span>（必須項目）</span></label></dt>
+                        <dd> <input id="name" type="text" name="name" placeholder="架空 太郎" required></dd>
+                    </dl>
+                    <dl>
+                        <dt><label for="kana">フリガナ<span>（必須項目）</span></label></dt>
+                        <dd> <input id="kana" type="text" name="kana" placeholder="カクウ　タロウ" required></dd>
+                    </dl>
+                    <dl>
+                        <dt><label for="email">メールアドレス<span>（必須項目）</span></label></dt>
+                        <dd> <input id="email" type="email" name="email" placeholder="kakuu@example.com" required></dd>
+                    </dl>
+                    <dl>
+                        <dt><label for="tel">電話番号<span>（必須項目）</span></label></dt>
+                        <dd><input id="tel"  type="tel" name="tel" placeholder="000-0000-0000" required></dd>
+                    </dl>
+                    <dl>
+                        <dt><label for="dateInput">ご予約日<span>（必須項目）</span></label></dt>
+                        <dd><input id="dateInput" type="date" name="date" required onfocus="(this.type='date')" onblur="if(this.value===''){this.type='text'; this.placeholder='年/月/日';}"></dd>
+                    </dl>
+                    <dl>
+                        <dt><label for="timeInput">ご予約時間<span>（必須項目）</span></label></dt>
+                        <dd><input id="timeInput" type="time" name="time" required onfocus="(this.type='time')" onblur="if(this.value===''){this.type='text'; this.placeholder='--:--';}"></dd>
+                    </dl>
+                    <dl>
+                        <dt><label for="people">ご予約人数<span>（必須項目）</span></label></dt>
+                        <dd><input id="people" type="number" name="people" required><span>人</span></dd>
+                    </dl>
+                    <dl>
+                        <dt><label for="note">備考<span>（ご要望やお持ちのアレルギーなど）</span></label></dt>
+                        <dd><textarea id="note" name="note" cols="30" rows="10" placeholder="ネギアレルギーがある"></textarea></dd>
+                    </dl>
+                    <div class="btn">
+                        <input type="submit" value="予約する">
+                    </div>
+                </form>
+            </div>
         </section>
     </main>
 
@@ -228,16 +226,23 @@
                     <img src="images/logo-damiiya.svg" width="104" height="128" alt="たまごかけご飯のだみい屋" decoding="async">
                 </a>
             </p>
-            <p>営業時間 : <time>11:00</time> 〜 <time>13:00</time>（金曜日定休日）</p>
+            <p>営業時間 : <time>11:00</time> 〜 <time>13:00</time><br>（金曜日定休日）</p>
             <p>お気軽にお問い合わせ下さい。</p>
             <p><a href="tel:000-0000-0000">000-0000-0000</a></p>
         </address>
         
         <ul>
             <li><a href="privacy-policy/index.html">プライバシーポリシー</a></li>
-            <li><a href="https://gihyo.jp/book" target="_blank">運営会社：技術評論社（新しいタブで開く）</a></li>
+            <li><a href="https://gihyo.jp/book" target="_blank">運営会社：技術評論社</a><img src="images/open-window.svg" alt="新しいタブで開く"></li>
         </ul>
         <p><small>&copy; <time>2022</time> だみい屋</small></p>
     </footer>
+
+    <script>
+        document.getElementById('dateInput').type = 'text';
+        document.getElementById('dateInput').placeholder = '年/月/日';
+        document.getElementById('timeInput').type = 'text';
+        document.getElementById('timeInput').placeholder = '--:--';
+    </script>
 </body>
 </html>

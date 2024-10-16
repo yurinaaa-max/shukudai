@@ -9,20 +9,27 @@ html {
 }
 
 body {
-    /* background: #020001; */
-    background: #f72e92;
+    background: #020001;
+    /* background: #f72e92; */
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
+    max-width: 1440px;
+}
 
-}
-figure{
-    margin: 0;
-    padding: 0;
-}
 
 /* ----------- 共通 ----------- */
+/*
 .container {
-    padding: 0 60px;
+    padding: 100px 60px 70px 60px;
+}
+この書き方は崩れやすくなってしまう
+*/
+
+.container {
+   max-width: 1040px;
+   margin: 0 auto;
+   box-sizing: content-box;
+   padding: 0 20px;
 }
 
 /* 縦書き文字 */
@@ -37,6 +44,15 @@ a {
     color: #fff;
     font-size: 1rem;
 }
+.title {
+    /* 3.2rem = 51.2px */
+    font-size: 3.5rem;
+    letter-spacing: 15px;
+    font-weight: bold;
+}
+strong {
+    color: #caba82;
+}
 
 /* ----------- header ----------- */
 header {
@@ -45,11 +61,16 @@ header {
     padding: 40px 60px;
     z-index: 5;
     max-width: 1440px;
+    margin: 0 auto;
+
+}
+h1>a{
+    display: inline-block;
 }
 
 .nav-ul a {
-    letter-spacing: 10px;
-    font-weight: bold;
+    letter-spacing: 8px;
+    font-weight: 600;
 }
 
 .nav-ul {
@@ -60,31 +81,38 @@ header {
     margin-left: 30px;
 }
 
-.nav-ul li:last-child {
-    border: 1px solid #fff;
+.nav-ul li:last-child a {
+    /* background: green; */
     padding: 15px 5px 10px 5px;
+    border: 1px solid #fff;
+}
+
+header img {
+    /* SVGのストロークの色を白に設定 */
+    filter: brightness(0) invert(1);
+    height: 90%;
 }
 
 /* ----------- mv ----------- */
 .mv {
     position: absolute;
     top: 0;
-    right: 0;
     width: 100%;
     z-index: -1;
+    max-width: 1440px;
 }
 
-figure img {
+.mv img {
     width: 100%;
     height: 100%;
 }
 
 .mv-p {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 2.7rem;
-    letter-spacing: 5px;
-    margin-left: 60px;
+    margin: 100px 0 250px 60px;
     line-height: 5rem;
+    letter-spacing: 5px;
 }
 
 .mv-p em {
@@ -107,47 +135,349 @@ figure img {
 /* ----------- お知らせ ----------- */
 #notice {
     display: flex;
+    align-items: center;
     border: #7c7c7c solid 1px;
     width: 70%;
-    margin: 0 auto;
-    padding: 20px 40px;
+    margin: 100px auto 0;
+    padding: 30px 40px;
     background: rgba(13, 5, 5, .9);
-    align-items: center;
-    margin-top: 100px;
 }
 
 #notice h2 {
     color: #caba82;
     padding-right: 40px;
+    font-weight: 600;
+    font-size: 1.3rem;
+    letter-spacing: 3px;
 }
-.notice-content{
+
+#notice div {
     border-left: #7c7c7c solid 1px;
-}
-.notice-content dl{
-    display: flex;
-    margin: 0;
-   margin-left: 40px;
-}
-.notice-content dl:not(:last-child){
-    margin-bottom: 20px;
-}
-.notice-content dd{
- 
-}
-/*
-#notice dl {
     padding-left: 40px;
+    width: 80%;
+    letter-spacing: 3px;
+    font-size: 0.75rem;
+
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#notice dl  {
+    display: flex;
+}
+
+#notice dl:not(:last-child) {
+    margin-bottom: 30px;
 }
 
 #notice dt {
-    width: 30%;
-    background: red;
+    width: auto;
+    /* background: red; */
 }
 
 #notice dd {
+    width: auto;
+    margin-left: 20px;
+    /* background: blue; */
+}
+
+
+/* ----------- こだわり ----------- */
+#commitment {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin: 100px auto 0;
+    width: 50%;
+}
+
+#commitment p {
+    width: 100%;
+    line-height: 2.5rem;
+    letter-spacing: 3px;
+    font-size: 0.9rem;
+    font-weight: 200;
+}
+
+#commitment h2 {
+    margin-left: 15px;
+}
+
+/* ----------- お品書き ----------- */
+#menu {
+    display: flex;
+    margin-top: 100px;
+}
+
+#menu h2 {
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+#menu div p {
+    letter-spacing: 3px;
+    font-size: 0.75rem;
+    line-height: 1.5rem;
+}
+
+#menu article {
+    margin: 50px 0 0 35px;
+    width: 50%;
+}
+
+#menu article figure img {
+    width: 100%;
+    height: 100%;
+}
+
+#menu h3 {
+    letter-spacing: 3px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.menu-p {
+    font-size: 0.6rem;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 0.7rem;
+    text-align: right;
+}
+
+/* ----------- アクセス ----------- */
+#access {
+    display: flex;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    margin-top: 100px;
+}
+
+#access iframe {
     width: 70%;
-    background: blue;
+    height: 500px;
+}
+
+#access h2 {
+    margin-bottom: 50px;
+}
+
+#access div {
+    width: 30%;
+    margin-left: 35px;
+}
+
+#access div > p {
+    margin-bottom: 40px;
+}
+
+#access table {
+    font-size: 0.65rem;
+    letter-spacing: 0;
+}
+
+#access caption {
+    margin-bottom: 10px;
+}
+
+#access dl {
+    display: flex;
+    margin-bottom: 30px;
+    line-height: 1.5rem;
+}
+
+#access dt {
+    width: 30%;
+}
+
+#access dd {
+    width: 70%;
+}
+
+thead, tbody, tr, th, td {
+    border: #7c7c7c 1px solid;
+    text-align: center;
+    padding: 5px;
+}
+
+.none {
+    color: #7c7c7c;
+}
+
+
+/* ----------- ご予約 -----------*/
+#reserve {
+    margin: 100px auto;
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+}
+
+#reserve h2, #reserve > p {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/*
+#reserve input, #reserve textarea {
+    background: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    width: 45%;
+    margin-left: 20px;
+}
+
+#reserve form {
+    max-width: 800px;
+    background: orange;
+    margin: 70px auto 0;
+}
+
+#reserve form p {
+    margin-bottom: 40px;
+}
+
+#reserve form span {
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+}
+
+#reserve .btn {
+    margin-top: 50px;
+    text-align: center;
+}
+
+#reserve .btn input {
+    background: none;
+    border: #fff 1px solid;
+    width: 150px;
+    text-align: center;
+    border-radius: 50px;
+    padding: 20px 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin: 0;
 }
 */
+/* ----------- 修正ご予約 -----------*/
+
+.form-wrap{
+    max-width: 800px;
+    margin: 0 auto;
+}
+.form-wrap dl{
+    display: flex;
+    margin-bottom: 30px;
+    align-items: center;
+}
+.form-wrap dl span{
+    font-size: 10px;
+}
+.form-wrap dt{
+    width: 35%;
+    text-align: right;
+}
+.form-wrap dd{
+    width: 60%;
+    margin-left: 5%;
+}
+.form-wrap dd span{
+    margin-left: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="tel"],
+input[type="number"],
+input[type="time"],
+textarea{
+    appearance: none;
+    background-color: transparent;
+    background-image: none;
+    border: none;
+    width: 100%;
+    display: inline-block;
+    color: inherit;
+    font-family: inherit;
+    background: #fff;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 8px;
+}
+textarea{
+    height: 150px;
+    width: 100%;
+}
+input[type="number"]{
+    width: 20%;
+}
+.btn{
+    text-align: center;
+}
+input[type="submit"]{
+    border: 1px solid #fff;
+    padding: 20px 30px;
+    border-radius: 50px;
+
+}
+
+/* ----------- footer ----------- */
+footer {
+    text-align: center;
+    font-size: 0.6rem;
+    letter-spacing: 3px;
+    color: #bebebe;
+    padding: 80px 0 70px 0;
+}
+
+footer address img {
+    /* SVGのストロークの色を白に設定 */
+    filter: brightness(0) invert(1);
+    margin-bottom: 60px;
+}
+
+footer address p:nth-child(2) {
+    margin-bottom: 40px;
+    line-height: 1.2rem;
+}
+
+footer address p:nth-child(3) {
+    margin-bottom: 10px;
+    font-size: 0.7rem;
+
+}
+
+footer address p:last-child {
+    margin-bottom: 40px;
+}
+
+footer address a {
+    font-size: 2rem;
+    color: #caba82;
+    font-weight: 800;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+footer ul li:last-child {
+    margin-left: 40px;
+}
+
+footer ul li a {
+    font-size: 0.6rem;
+    letter-spacing: 3px;
+    color: #bebebe;
+    border-bottom: #7c7c7c 1px solid;
+}
+
+footer ul img {
+    width: 10px;
+    margin-left: 3px;
+}
